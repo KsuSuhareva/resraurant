@@ -1,22 +1,18 @@
-package by.intervalecource.resraurant.service.restsutant;
+package by.intervalecource.resraurant.service.restaurant;
 
 import by.intervalecource.resraurant.model.Visitor;
 import by.intervalecource.resraurant.service.kitchen.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-
+@RequiredArgsConstructor
 public class RestaurantSwitchServiceImpl implements RestaurantService {
-    @Autowired
-    private AsianKitchen asianKitchen;
-    @Autowired
-    private FastFood fastFood;
-    @Autowired
-    private MolecularKitchen molecularKitchen;
-    @Autowired
-    private SlavyanskayaKitchen slavyanskayaKitchen;
-    @Autowired
-    private DefaultStolovka stolovka;
+
+    private final AsianKitchen asianKitchen;
+    private final FastFood fastFood;
+    private final MolecularKitchen molecularKitchen;
+    private final SlavyanskayaKitchen slavyanskayaKitchen;
+    private final DefaultStolovka stolovka;
 
     @Override
     public void feed(Visitor visitor) {

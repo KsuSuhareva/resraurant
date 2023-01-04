@@ -1,19 +1,18 @@
 package by.intervalecource.resraurant.controllers;
 
 import by.intervalecource.resraurant.model.Visitor;
-import by.intervalecource.resraurant.service.restsutant.RestaurantService;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Controller;
+import by.intervalecource.resraurant.service.restaurant.RestaurantService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 @RequestMapping("/restaurant/")
 public class RestaurantController {
-    private RestaurantService service;
+    private final RestaurantService service;
 
     @PostMapping("feed")
     public Visitor feed(@RequestBody Visitor visitor) {

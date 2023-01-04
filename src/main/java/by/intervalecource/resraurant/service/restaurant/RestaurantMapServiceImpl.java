@@ -1,4 +1,4 @@
-package by.intervalecource.resraurant.service.restsutant;
+package by.intervalecource.resraurant.service.restaurant;
 
 import by.intervalecource.resraurant.model.Visitor;
 import by.intervalecource.resraurant.service.kitchen.DefaultStolovka;
